@@ -1,0 +1,31 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Terror",
+      "filmes": [
+        {
+          "id": 1,
+          "nome": "It",
+          "imagem": "https://via.placeholder.com/150"
+        },
+        {
+          "id": 2,
+          "nome": "Invocação do Mal",
+          "imagem": "https://via.placeholder.com/150"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Ação",
+      "filmes": [
+        {
+          "id": 3,
+          "nome": "John Wick",
+          "imagem": "https://via.placeholder.com/150"
+        }
+      ]
+    }
+  ]
+}
