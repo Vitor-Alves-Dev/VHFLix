@@ -34,17 +34,17 @@ export default function CardFilme({ item }) {
 
 const styles = StyleSheet.create({
   card: {
-    marginLeft: isWeb ? 100 : 15, // 🔥 maior na web,
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
-    elevation: 8,
+      marginLeft: isWeb ? 100 : 15,
+      borderRadius: 10,
+      shadowColor: '#000',
+      shadowOpacity: 0.4,
+      shadowRadius: 8,
+      elevation: 8,
   },
 
   image: {
-    width: isWeb ? 150 : 110,
-    height: isWeb ? 250 : 160,
-    borderRadius: 10,
+      width: isWeb ? 150 : 110,
+      height: isWeb ? 250 : 160,
+      borderRadius: 10,
   },
 });

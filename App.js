@@ -27,7 +27,7 @@ import { Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
-const isWeb = width > 768; // 👈 breakpoint
+const isWeb = width > 768;
 
 
 import Header from './src/Header'
@@ -101,33 +101,32 @@ export default function App() {
       
       <Header/>
       <LinearGradient
-      colors={['#140A2E','#1f053f', '#330966']}
-      locations={[0.3, 0.8, 1]}
-      start={{ x: 0, y: 0 }}   // começa na esquerda
-      end={{ x: 1, y: 0 }} 
-      style={{ flex: 1 }}
-    >
-      
-      <FlatList
-      style={{
-    width: '100%',
-    maxWidth: isWeb ? 1900 : '100%', // 🔥 só limita na web
-    alignSelf: 'center'
-  }}
-  contentContainerStyle={{
-    paddingBottom: 100,
-  }}
-        data={filmes}
-        keyExtractor={(item) => item.id.toString()}
-       ListHeaderComponent={
-  <View style={{ width: '100%' }}>
-    <Banner imagem={bannerjonhwick4} />
-  </View>
-}
-        renderItem={({ item }) => ( <ListaFilmes titulo={item.titulo} filmes={item.filmes} 
-          />
-        )}
-      />
+          colors={['#140A2E','#1f053f', '#330966']}
+          locations={[0.3, 0.8, 1]}
+          start={{ x: 0, y: 0 }}  
+          end={{ x: 1, y: 0 }} 
+          style={{ flex: 1 }}
+        >
+        
+        <FlatList
+          style={{
+            width: '100%',
+            maxWidth: isWeb ? 1900 : '100%',
+          }}
+          contentContainerStyle={{
+            paddingBottom: 100,
+          }}
+          data={filmes}
+          keyExtractor={(item) => item.id.toString()}
+          ListHeaderComponent={
+          <View style={{ width: '100%' }}>
+            <Banner imagem={bannerjonhwick4} />
+          </View>
+  }
+          renderItem={({ item }) => ( <ListaFilmes titulo={item.titulo} filmes={item.filmes} 
+            />
+          )}
+        />
       </LinearGradient>
     </View>
   )
@@ -142,10 +141,10 @@ const styles = StyleSheet.create({
 
    },
    logo: {
-    width: 200,
-    height: 150,
-    alignItems: 'center',
-    justifyContent: 'center'
+      width: 200,
+      height: 150,
+      alignItems: 'center',
+      justifyContent: 'center'
    },
    
 })

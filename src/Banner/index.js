@@ -37,8 +37,8 @@ export default function Banner({ imagem }) {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-  height: isWeb ? 800 : 220, // 🔥 maior na web
-  overflow: 'hidden',
+    height: isWeb ? 800 : 220,
+    overflow: 'hidden',
   },
 
   image: {
